@@ -20,7 +20,7 @@ const Services = () => {
             img: cavity
         },
         {
-            _id: 1,
+            _id: 3,
             name: 'Teeth whitening',
             description: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
             img: whitening

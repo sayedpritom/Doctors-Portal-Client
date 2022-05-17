@@ -3,23 +3,27 @@ import Banner from './Banner';
 import Info from './Info';
 import clock from '../../assets/icons/clock.svg';
 import Services from './Services';
-import ExperimentalDentalCare from './ExperimentalDentalCare';
+import ExceptionalDentalCare from './ExceptionalDentalCare';
 import MakeAppointment from './MakeAppointment';
 import Testimonials from './Testimonials';
+import ContactUs from './ContactUs';
+import Footer from '../Shared/Footer';
 
 const Home = () => {
     return (
         <div>
-            <div className="px-12">
+            <div className="max-w-7xl mx-auto">
                 <Banner></Banner>
                 <Info></Info>
                 <Services></Services>
-                <ExperimentalDentalCare></ExperimentalDentalCare>
+                <ExceptionalDentalCare></ExceptionalDentalCare>
             </div>
             <MakeAppointment></MakeAppointment>
-            <div className="px-12">
+            <div className="max-w-7xl mx-auto">
                 <Testimonials></Testimonials>
             </div>
+            <ContactUs></ContactUs>
+            <Footer></Footer>
         </div>
     );
 };
