@@ -23,7 +23,7 @@ const Login = () => {
 
     let navigate = useNavigate();
     let location = useLocation();
-  
+
     let from = location.state?.from?.pathname || "/";
 
 
@@ -31,7 +31,7 @@ const Login = () => {
         if (user || gUser) {
             navigate(from, { replace: true });
         }
-    } ,[token, from, navigate])
+    }, [token, from, navigate])
 
     if (loading || gLoading) {
         return <Loading></Loading>

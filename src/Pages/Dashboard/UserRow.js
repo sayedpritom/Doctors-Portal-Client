@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 const UserRow = ({ user, refetch }) => {
-    const { email, role } = user;
+    const { email, role, admin } = user;
 
     const makeAdmin = () => {
         fetch(`https://immense-shore-30870.herokuapp.com/user/admin/${email}`, {

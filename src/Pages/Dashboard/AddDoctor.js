@@ -2,20 +2,21 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { useQuery } from 'react-query';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useAdmin from '../../hooks/useAdmin';
 
 const AddDoctor = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
 
     const { data: services, isLoading } = useQuery('services', () => fetch('http://localhost:5000/service').then(res => res.json()))
 
-    
+
     const imageStorageKey = '18e3e5c22bace69d65d048922d9822a0';
-    
+
     const onSubmit = async data => {
         const formData = new FormData();
         const image = data.image[0];
@@ -26,21 +27,38 @@ const AddDoctor = () => {
             method: 'POST',
             body: formData
         })
-        .then(res => res.json())
-        .then(result => {
-            if(result.success) {
-                const img = result.data.url;
-                const doctor = { 
-                    name: data.name,
-                    email: data.email, 
-                    specialty: data.specialty,
-                    img: img
+            .then(res => res.json())
+            .then(result => {
+                if (result.success) {
+                    const img = result.data.url;
+                    const doctor = {
+                        name: data.name,
+                        email: data.email,
+                        specialty: data.specialty,
+                        img: img
+                    }
+                    // send to your database
+                    fetch('http://localhost:5000/doctor', {
+                        method: 'POST',
+                        headers: {
+                            'content-Type': 'application/json',
+                            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                        },
+                        body: JSON.stringify(doctor)
+                    })
+                    .then(res => res.json())
+                    .then(inserted => {
+                        if(inserted.insertedId) {
+                            toast.success('Doctor Added Successfully');
+                            reset();
+                        } else {
+                            toast('Failed To Add The Doctor')
+                        }
+                    })
+
                 }
-                // send to your database
-                
-            }
-            console.log('imgbb', result)
-        })
+                console.log('imgbb', result)
+            })
     };
     return (
         <div>
@@ -94,11 +112,11 @@ const AddDoctor = () => {
                     <label className="label">
                         <span className="label-text">Specialty</span>
                     </label>
-                    <select {...register('specialty', )} class="select input-bordered w-full max-w-xs">
+                    <select {...register('specialty',)} class="select input-bordered w-full max-w-xs">
                         {services?.map(service => <option key={service._id} value={service.name}>{service.name}</option>)}
                     </select>
                 </div>
-                
+
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Photo</span>
