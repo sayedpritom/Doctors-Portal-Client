@@ -12,7 +12,7 @@ const AddDoctor = () => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
 
-    const { data: services, isLoading } = useQuery('services', () => fetch('http://localhost:5000/service').then(res => res.json()))
+    const { data: services, isLoading } = useQuery('services', () => fetch('https://immense-shore-30870.herokuapp.com/service').then(res => res.json()))
 
 
     const imageStorageKey = '18e3e5c22bace69d65d048922d9822a0';
@@ -38,7 +38,7 @@ const AddDoctor = () => {
                         img: img
                     }
                     // send to your database
-                    fetch('http://localhost:5000/doctor', {
+                    fetch('https://immense-shore-30870.herokuapp.com/doctor', {
                         method: 'POST',
                         headers: {
                             'content-Type': 'application/json',

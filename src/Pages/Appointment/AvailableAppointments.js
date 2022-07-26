@@ -11,7 +11,7 @@ const AvailableAppointments = ({ date }) => {
 
     const formattedDate = format(date, 'PP');
     const { data: services, isLoading, refetch } = useQuery(['available', formattedDate], () => fetch(`https://immense-shore-30870.herokuapp.com/available?date=${formattedDate}`)
-            .then(response => response.json()));
+        .then(response => response.json()));
 
     // useEffect(() => {
     //     fetch(`https://immense-shore-30870.herokuapp.com/available?date=${formattedDate}`)
@@ -19,7 +19,7 @@ const AvailableAppointments = ({ date }) => {
     //         .then(data => setServices(data))
     // }, [formattedDate])
 
-    if(isLoading) {
+    if (isLoading) {
         return <Loading></Loading>
     }
 
@@ -33,11 +33,11 @@ const AvailableAppointments = ({ date }) => {
                     setTreatment={setTreatment}
                 ></Service>)}
             </div>
-            {treatment && <BookingModal 
-            date={date} 
-            treatment={treatment}
-            setTreatment={setTreatment}
-            refetch={refetch}
+            {treatment && <BookingModal
+                date={date}
+                treatment={treatment}
+                setTreatment={setTreatment}
+                refetch={refetch}
             ></BookingModal>}
         </div>
     );
