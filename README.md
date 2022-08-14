@@ -1,13 +1,13 @@
 ## Doctors Portal Website. Live site: https://melodic-salamander-c2acfa.netlify.app/
 
-**Website Features and Functionalities:**
+Website Features and Functionalities:
 * User authentication using email & password. 
 * Private/Protected Route(Appointment page)
 * Personalized dashboard for both user & admin
 * Basic Payment System(Implemented using stripe) 
 * Functionalities: add new doctor, delete doctors, make appointments & payment for appointments, view all appointments. 
 
-###### Used technologies in front-end:
+Used technologies in front-end:
 * HTML, CSS, 
 * Tailwind CSS, DaisyUI
 * React(react components, react router, react hook form, react query, React Toastify)
@@ -15,9 +15,9 @@
 
 
 
-**Back-end(server) code link: https://github.com/sayedpritom999/Doctors-Portal-Server**
+Back-end(server) code link: https://github.com/sayedpritom999/Doctors-Portal-Server
 
-**In the back-end, the implemented APIs are:**
+In the back-end, the implemented APIs are:
 1. Create users in MongoDB and issue a JWT token for the client
 2. Create payment intent
 3. Get all services
@@ -33,7 +33,7 @@
 13. Add new doctor in database
 14. Delete doctor in database
 
-**Used technologies in the back-end:**
+Used technologies in the back-end:
 * Node.js, express.js
 * JSON Web Token,
 * Mongodb(for database)
