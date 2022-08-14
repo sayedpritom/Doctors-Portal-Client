@@ -1,6 +1,6 @@
 ## Doctors Portal Website. Live site: https://melodic-salamander-c2acfa.netlify.app/
 
-** Website Features and Functionalities: **
+**Website Features and Functionalities:**
 * User authentication using email & password. 
 * Private/Protected Route(Appointment page)
 * Personalized dashboard for both user & admin
@@ -15,7 +15,7 @@
 
 
 
-** Back-end(server) code link: https://github.com/sayedpritom999/Doctors-Portal-Server **
+**Back-end(server) code link: https://github.com/sayedpritom999/Doctors-Portal-Server**
 
 ** In the back-end, the implemented APIs are: **
 1. Create users in MongoDB and issue a JWT token for the client
@@ -35,7 +35,7 @@
 
 
 
-** Used technologies in the back-end: **
+**Used technologies in the back-end:**
 * Node.js, express.js
 * JSON Web Token,
 * Mongodb(for database)
