@@ -17,7 +17,7 @@
 
 **Back-end(server) code link: https://github.com/sayedpritom999/Doctors-Portal-Server**
 
-** In the back-end, the implemented APIs are: **
+**In the back-end, the implemented APIs are:**
 1. Create users in MongoDB and issue a JWT token for the client
 2. Create payment intent
 3. Get all services
