@@ -1,71 +1,42 @@
-# Getting Started with Create React App
+## Doctors Portal Website. Live site: https://melodic-salamander-c2acfa.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+** Website Features and Functionalities: **
+* User authentication using email & password. 
+* Private/Protected Route(Appointment page)
+* Personalized dashboard for both user & admin
+* Basic Payment System(Implemented using stripe) 
+* Functionalities: add new doctor, delete doctors, make appointments & payment for appointments, view all appointments. 
 
-## Available Scripts
+** Used technologies in front-end: **
+* HTML, CSS, 
+* Tailwind CSS, DaisyUI
+* React(react components, react router, react hook form, react query, React Toastify)
+* Firebase Authentication(user login and registration)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+** Back-end(server) code link: https://github.com/sayedpritom999/Doctors-Portal-Server **
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+** In the back-end, the implemented APIs are: **
+1. Create users in MongoDB and issue a JWT token for the client
+2. Create payment intent
+3. Get all services
+4. Get all appointments
+5. Get all appointments for a particular user
+6. Get a certain appointment for a particular user
+7. Verify admin
+8. Create new user in database
+9. Get all available slots of a particular service
+10. Store new booking in database
+11. Update booking after payment
+12. Get all doctors
+13. Add new doctor in database
+14. Delete doctor in database
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# Doctors-Portal-Client" 
+** Used technologies in the back-end: **
+* Node.js, express.js
+* JSON Web Token,
+* Mongodb(for database)
+* Heroku(for server hosting)
