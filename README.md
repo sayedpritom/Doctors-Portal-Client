@@ -7,7 +7,7 @@
 * Basic Payment System(Implemented using stripe) 
 * Functionalities: add new doctor, delete doctors, make appointments & payment for appointments, view all appointments. 
 
-**Used technologies in front-end:**
+###### Used technologies in front-end:
 * HTML, CSS, 
 * Tailwind CSS, DaisyUI
 * React(react components, react router, react hook form, react query, React Toastify)
