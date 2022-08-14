@@ -4,13 +4,13 @@
 * User authentication using email & password. 
 * Private/Protected Route(Appointment page)
 * Personalized dashboard for both user & admin
-* Basic Payment System(Implemented using stripe) 
+* Basic payment system(Implemented using stripe) 
 * Functionalities: add new doctor, delete doctors, make appointments & payment for appointments, view all appointments. 
 
-**Used technologies in front-end:**
+**Used technologies in the front-end:**
 * HTML, CSS, 
 * Tailwind CSS, DaisyUI
-* React(react components, react router, react hook form, react query, React Toastify)
+* React(react components, react router, react query, react hook form, day picker, date-fns, React Toastify)
 * Firebase Authentication(user login and registration)
 
 
