@@ -15,7 +15,7 @@
 
 
 
-**Back-end(server) code link: https://github.com/sayedpritom999/Doctors-Portal-Server**
+**Back-end(server) code link: https://github.com/sayedpritom/Doctors-Portal-Server**
 
 **In the back-end, the implemented APIs are:**
 1. Create users in MongoDB and issue a JWT token for the client
